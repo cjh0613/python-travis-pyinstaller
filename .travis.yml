@@ -1,0 +1,31 @@
+language: shell
+os: windows
+sudo: required
+before_install:
+  - rm -r -f /c/Python27
+  - powershell -Command "Set-ExecutionPolicy RemoteSigned -scope CurrentUser"
+  - powershell -Command "Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')"
+  - scoop help
+  - scoop install python -a x86
+  - python -V
+
+env: PATH=/c/Users/travis/scoop/apps/python/current:/c/Users/travis/scoop/apps/python/current/Scripts:/c/Users/travis/scoop/apps/python/current/Tools/Scripts:/c/Users/travis/scoop/shims:/c/Users/travis/scoop:$PATH
+install:
+  - python -m pip install --upgrade pip
+  - pip install --upgrade pip
+  - export TZ='Asia/Shanghai'
+  - git config --global user.name 用户名
+  - git config --global user.email 邮箱
+  - pip install #依赖包
+  - pip install pyinstaller
+script:
+  - pyinstaller -F 1.py -i "xzxs.ico"
+  - cd dist
+  - git init
+  - git add -A
+  - git commit -m "CJH python exe Auto Builder"
+  #推送至指定仓库，建议使用国内仓库，下载速度快
+  - git push -f "https://${TOKEN_USER}:${TOKEN}@项目地址.git" master:master
+branches:
+  only:
+    - master
