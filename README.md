@@ -1,7 +1,9 @@
 # pythonOnlineCompile
 自动生成 峡州仙士ico python win32 exe
 
-最新说明地址 ：https://cjh0613.github.io/blog/20200521pythonOnlineInstaller.html
+English: https://cjh0613.github.io/en/20200521pythonOnlineCompile.html
+
+最新说明地址 ：https://cjh0613.github.io/blog/20200521pythonOnlineCompile.html
 
 [![Build Status](https://travis-ci.org/cjh0613/pythonOnlineCompile.svg?branch=master)](https://travis-ci.org/cjh0613/pythonOnlineCompile)
 
