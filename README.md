@@ -1,5 +1,7 @@
 # pythonOnlineCompile
-自动生成 峡州仙士ico python win32 exe
+自动生成 python win32 exe
+
+## Using Travis Ci and GitHub to build Python online compiling and packaging environment to automatically generate windows exe binary files
 
 English: https://cjh0613.github.io/en/20200521pythonOnlineCompile.html
 
