@@ -1,3 +1,6 @@
+# 可能已经过时。建议搜索 GitHub action 相关项目
+本仓库不再维护。
+
 # pythonOnlineCompile
 自动生成 python win32 exe
 
